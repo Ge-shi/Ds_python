@@ -46,7 +46,7 @@ class SingleLinkList(object):
     def insert(self, pos, item):
         if pos <= 0:
             self.add(item)
-        elif pos > self.length - 1:
+        elif pos > self.length() - 1:
             self.append(item)
         else:
             node = Node(item)
@@ -73,8 +73,10 @@ class SingleLinkList(object):
 
     def search(self, item):
         cur = self.__head
+        index = 0
         while cur is not None:
             if cur.item == item:
-                return True
+                return print(index)
             cur = cur.next
-        return False
+            index += 1
+        return print(-1)
