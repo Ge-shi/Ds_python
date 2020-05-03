@@ -1,5 +1,8 @@
 class Sort(object):
 
+    def __init__(self, item):
+        self.item = item
+
     def bubble_sort(self, alist):
         """冒泡排序"""
         length = len(alist)
@@ -25,3 +28,20 @@ class Sort(object):
                 if alist[j] < alist[index]:
                     index = j
             alist[i], alist[index] = alist[index], alist[i]
+
+    def quick_sort(self, alist, begin, end):
+        if end <= begin:
+            return
+        temp = alist[begin]
+        left = begin
+        right = end
+        while right > left:
+            while right > left and alist[right] >= temp:
+                right -= 1
+            while right > left and alist[left] <= temp:
+                left += 1
+            alist[left], alist[right] = alist[right], alist[left]
+        alist[begin] = alist[left]
+        alist[left] = temp
+        self.quick_sort(alist, begin, left - 1)
+        self.quick_sort(alist, left + 1, end)

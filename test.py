@@ -33,3 +33,7 @@ if __name__ == '__main__':
     list3 = [1, 2, 3, 4, 6, 5, 9, 7, 8, 0, -1, 100, -34]
     Sort.bubble_sort(None, list3)
     print(list3)
+    list4 = [5, 1, 3, 4, 6, 9, 8, 7]
+    a = Sort(None)
+    Sort.quick_sort(a, list4, 0, len(list4) - 1)
+    print(list4)
