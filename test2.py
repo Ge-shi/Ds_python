@@ -9,7 +9,7 @@
 # class Solution:
 
 
-def quick_sort(alist, begin, end):   
+def quick_sort(alist, begin, end):
     if end <= begin:
         return
     temp = alist[begin]
