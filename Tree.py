@@ -54,7 +54,7 @@ class Tree:
         queue = list()
         queue.append(root)
         while queue:
-            cur = queue.pop()
+            cur = queue.pop(0)
             print(cur.val)
             if cur.left is not None:
                 queue.append(cur.left)
